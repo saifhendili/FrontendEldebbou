@@ -13,7 +13,7 @@ RECOMMENDED_SYS
 
 export const GetProducts = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/product');
+    const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/product');
 
     dispatch({
       type: GET_PRODUCTS,
