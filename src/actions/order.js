@@ -30,7 +30,7 @@ export const AddOrder = (formData) => async (dispatch) => {
   
     try {
       const res = await axios.post(
-        "/api/order",
+        "https://evening-refuge-84655.herokuapp.com/api/order",
         formData,
         config
       );
@@ -54,7 +54,7 @@ export const AddOrder = (formData) => async (dispatch) => {
   // Get free ORDERS 
 export const getOrdersFree = () => async (dispatch) => {
   try {
-    const res = await axios.get(`/api/order/all-orders-without-delivery`);
+    const res = await axios.get(`https://evening-refuge-84655.herokuapp.com/api/order/all-orders-without-delivery`);
 
     dispatch({
       type: GET_ORDER_WITHOUT_DELIVERY,
@@ -72,7 +72,7 @@ export const getOrdersFree = () => async (dispatch) => {
 
 export const ReserveOrder = (id) => async (dispatch) => {
   try {
-    const res = await axios.put( `/api/order/reserve-order/${id}`,
+    const res = await axios.put( `https://evening-refuge-84655.herokuapp.com/api/order/reserve-order/${id}`,
   
     );
 
@@ -93,7 +93,7 @@ export const ReserveOrder = (id) => async (dispatch) => {
 
 export const CondirmedState = ( id) => async (dispatch) => {
   try {
-    const res = await axios.put( `/api/order/state-order/${id}`);
+    const res = await axios.put( `https://evening-refuge-84655.herokuapp.com/api/order/state-order/${id}`);
 
     dispatch({
       type: CHANGE_STATE,
@@ -111,7 +111,7 @@ export const CondirmedState = ( id) => async (dispatch) => {
 
 export const MyOrdersDelivery = () => async (dispatch) => {
   try {
-    const res = await axios.get(`/api/order/myorders`);
+    const res = await axios.get(`https://evening-refuge-84655.herokuapp.com/api/order/myorders`);
 
     dispatch({
       type: MY_ORDERS_DELIVERY,
@@ -131,7 +131,7 @@ export const AddOrderExchange = (id,idproposition) => async (dispatch) => {
 
   try {
     const res = await axios.post(
-      `/api/propositions/acceptExchange/${id}/${idproposition}`,
+      `https://evening-refuge-84655.herokuapp.com/api/propositions/acceptExchange/${id}/${idproposition}`,
       
     );
 
@@ -158,7 +158,7 @@ export const ReserveOrderDonation = (id) => async (dispatch) => {
 
   try {
     const res = await axios.post(
-      `/api/order/reservationdonation/${id}`,  
+      `https://evening-refuge-84655.herokuapp.com/api/order/reservationdonation/${id}`,  
     );
 
     dispatch({

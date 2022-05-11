@@ -30,7 +30,7 @@ export const GetProducts = () => async (dispatch) => {
 
 export const GetProductsExchange = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/propositions');
+    const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/propositions');
 
     dispatch({
       type:GET_MY_EXCHANGE_PRODUCTS ,
@@ -49,7 +49,7 @@ export const GetProductsExchange = () => async (dispatch) => {
 
   export const getProduct = (id) => async (dispatch) => {
     try {
-      const res = await axios.get(`/api/product/${id}`);
+      const res = await axios.get(`https://evening-refuge-84655.herokuapp.com/api/product/${id}`);
   
       dispatch({
         type: GET_PRODUCT,
@@ -65,7 +65,7 @@ export const GetProductsExchange = () => async (dispatch) => {
 
   export const deleteProduct = (id) => async (dispatch) => {
     try {
-      await axios.delete(`/api/product/${id}`);
+      await axios.delete(`https://evening-refuge-84655.herokuapp.com/api/product/${id}`);
   
       dispatch({
         type: DELETE_PRODUCT,
@@ -89,7 +89,7 @@ export const addProduct = (formData) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      `/api/product/`,
+      `https://evening-refuge-84655.herokuapp.com/api/product/`,
       formData,
       config
     );
@@ -110,7 +110,7 @@ export const addProduct = (formData) => async (dispatch) => {
   
 export const RecommandedSys = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/users/recommandedsys');
+    const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/users/recommandedsys');
 
     dispatch({
       type: RECOMMENDED_SYS,

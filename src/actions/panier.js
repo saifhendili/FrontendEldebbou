@@ -11,7 +11,7 @@ import {
 export const AddPanier = (id ) => async (dispatch) => {
 
     try {
-    const res = await axios.post(`/api/panier/${id}`);
+    const res = await axios.post(`https://evening-refuge-84655.herokuapp.com/api/panier/${id}`);
     dispatch({
       type: ADD_TO_PANIER,
       payload: res.data,
@@ -29,7 +29,7 @@ export const AddPanier = (id ) => async (dispatch) => {
 
 export const GetPanier = () => async (dispatch) => {
   try {
-    const res = await axios.get(`/api/panier/`);
+    const res = await axios.get(`https://evening-refuge-84655.herokuapp.com/api/panier/`);
 
     dispatch({
       type: GET_PANIER,
@@ -45,7 +45,7 @@ export const GetPanier = () => async (dispatch) => {
 
 export const DeleteFromPanier = (id) => async (dispatch) => {
     try {
-      await axios.delete(`/api/panier/${id}`);
+      await axios.delete(`https://evening-refuge-84655.herokuapp.com/api/panier/${id}`);
   
       dispatch({
         type: REMOVE_PANIER,

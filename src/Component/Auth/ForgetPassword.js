@@ -15,7 +15,7 @@ const ForgetPasswordHandler= async(e)=>{
       };
       try {
         const {data} = await axios.post(
-          `/api/users/forgetpassword/`,
+          `https://evening-refuge-84655.herokuapp.com/api/users/forgetpassword/`,
           {email},config
 
         );

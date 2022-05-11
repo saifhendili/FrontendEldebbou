@@ -13,7 +13,7 @@ import {
 
 export const GetWishLists = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/wishlist');
+    const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/wishlist');
 
     dispatch({
       type: GET_WISHLISTS,
@@ -30,7 +30,7 @@ export const GetWishLists = () => async (dispatch) => {
 
 export const DeleteWishlist = (id) => async (dispatch) => {
     try {
-      await axios.delete(`/api/wishlist/${id}`);
+      await axios.delete(`https://evening-refuge-84655.herokuapp.com/api/wishlist/${id}`);
   
       dispatch({
         type: REMOVE_WISHLIST,
@@ -46,7 +46,7 @@ export const DeleteWishlist = (id) => async (dispatch) => {
   };
   export const Addwishlist = (id) => async (dispatch) => {
     try {
-      const res = await axios.post(`/api/wishlist/${id}`);
+      const res = await axios.post(`https://evening-refuge-84655.herokuapp.com/api/wishlist/${id}`);
   
       dispatch({
         type: ADD_WISHLIST,

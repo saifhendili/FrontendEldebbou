@@ -14,7 +14,7 @@ import {
 
 export const GetRequestsOrganisation = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/requestUser/Organisation');
+    const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/requestUser/Organisation');
 
     dispatch({
       type: GET_REQUEST_ORGANISATION,
@@ -34,7 +34,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
 
   export const GetRequestsDelivery = () => async (dispatch) => {
     try {
-      const res = await axios.get('/api/requestUser/delivery');
+      const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/requestUser/delivery');
   
       dispatch({
         type: GET_REQUEST_DILEVRY,
@@ -50,7 +50,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
 
   export const AcceptRequest = (id) => async (dispatch) => {
     try {
-        const res = await axios.put(`/api/requestUser/accept-organisation/${id}`);
+        const res = await axios.put(`https://evening-refuge-84655.herokuapp.com/api/requestUser/accept-organisation/${id}`);
         dispatch({
             type: ACCEPT_Request_ORGANISATION,
             payload: res.data,
@@ -67,7 +67,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
   
   export const AcceptRequestDelivery = (id) => async (dispatch) => {
     try {
-        const res = await axios.put(`/api/requestUser/accept-delivery/${id}`);
+        const res = await axios.put(`https://evening-refuge-84655.herokuapp.com/api/requestUser/accept-delivery/${id}`);
         dispatch({
             type: ACCEPT_Request_DELIVERY,
             payload: res.data,
@@ -84,7 +84,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
 
   export const BlockUser = (id) => async (dispatch) => {
     try {
-        const res = await axios.put(`/api/requestUser/block/${id}`);
+        const res = await axios.put(`https://evening-refuge-84655.herokuapp.com/api/requestUser/block/${id}`);
         dispatch({
             type: BLOCK_USER,
             payload: res.data,
@@ -101,7 +101,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
   
   export const UnBlockUser = (id) => async (dispatch) => {
     try {
-        const res = await axios.put(`/api/requestUser/unblock/${id}`);
+        const res = await axios.put(`https://evening-refuge-84655.herokuapp.com/api/requestUser/unblock/${id}`);
         dispatch({
             type: UNBLOCK_USER,
             payload: res.data,
@@ -117,7 +117,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
   };
   export const GetQuestion = () => async (dispatch) => {
     try {
-      const res = await axios.get('/api/AddIntent');
+      const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/AddIntent');
   
       dispatch({
         type: GET_OPINIONS,
@@ -141,7 +141,7 @@ export const GetRequestsOrganisation = () => async (dispatch) => {
     };
     try {
         
-      const res = await axios.delete(`/api/AddIntent/add/${id}/${rep}`,
+      const res = await axios.delete(`https://evening-refuge-84655.herokuapp.com/api/AddIntent/add/${id}/${rep}`,
       config
       
     );

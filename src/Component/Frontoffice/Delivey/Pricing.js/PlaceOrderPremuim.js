@@ -18,7 +18,7 @@ function PlaceOrderPremuim(props) {
   useEffect(() => {
 
     const fetchClientSecret = async () => {
-      const data = await axios.post("/api/order/premieum", {
+      const data = await axios.post("https://evening-refuge-84655.herokuapp.com/api/order/premieum", {
         amount:props.auth.user.Total ,
       });
    setClientSecret(data.data.clientSecret);
@@ -43,7 +43,7 @@ function PlaceOrderPremuim(props) {
       .then((result) => {
        console.log(JSON.stringify(result)+"sssssssssss") 
      if(result.paymentIntent.status="succeeded"){
-      axios.put("/api/order/switch-to-prem");
+      axios.put("https://evening-refuge-84655.herokuapp.com/api/order/switch-to-prem");
            
       navigate("/dashboard");
 

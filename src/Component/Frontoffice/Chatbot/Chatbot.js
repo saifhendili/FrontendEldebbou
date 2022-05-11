@@ -59,7 +59,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('/api/dialogflow/dialogflow', textQueryVariables)
+            const response = await Axios.post('https://evening-refuge-84655.herokuapp.com/api/dialogflow/dialogflow', textQueryVariables)
 
             for (let content of response.data.fulfillmentMessages) {
 
@@ -97,7 +97,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('/api/dialogflow/eventQuery', eventQueryVariables)
+            const response = await Axios.post('https://evening-refuge-84655.herokuapp.com/api/dialogflow/eventQuery', eventQueryVariables)
 
             for (let content of response.data.fulfillmentMessages) {
 

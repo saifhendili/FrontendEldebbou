@@ -14,7 +14,7 @@ const Results = ({ results, processing }) => {
   }
   if(!processing && results && results.length > 0){
      (
-    results.map(x=>{   Axios.put(`/api/users/feeling/${(x.expressions.asSortedArray()[0].expression)}`)})
+    results.map(x=>{   Axios.put(`https://evening-refuge-84655.herokuapp.com/api/users/feeling/${(x.expressions.asSortedArray()[0].expression)}`)})
 
     )
   }

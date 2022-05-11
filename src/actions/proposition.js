@@ -11,7 +11,7 @@
   export const AddProposition = (id,formData) => async (dispatch) => {
   
     try {
-      const res = await axios.post(`/api/propositions/${id}`,
+      const res = await axios.post(`https://evening-refuge-84655.herokuapp.com/api/propositions/${id}`,
       formData
       
     );
@@ -30,7 +30,7 @@
   
   export const getPropositions = (id) => async (dispatch) => {
     try {
-        const res = await axios.get(`/api/propositions/${id}`);
+        const res = await axios.get(`https://evening-refuge-84655.herokuapp.com/api/propositions/${id}`);
     
         dispatch({
           type: GET_PROPOSITIONS,
@@ -46,7 +46,7 @@
   
   export const DeleteProposition = (id) => async (dispatch) => {
     try {
-        await axios.delete(`/api/propositions/${id}`);
+        await axios.delete(`https://evening-refuge-84655.herokuapp.com/api/propositions/${id}`);
     
         dispatch({
           type: DELETE_PROPOSITION,

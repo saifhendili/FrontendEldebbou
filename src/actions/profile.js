@@ -18,7 +18,7 @@ export const getsearch = (payload) => (dispatch) => {
 };
 
 export const GetSearchProduct = (search) => async(dispatch) => {
-  await axios.post('/api/users/get-search',{search});
+  await axios.post('https://evening-refuge-84655.herokuapp.com/api/users/get-search',{search});
   dispatch({
     type: GET_SEARCH_PRODUCT,
     payload:search,
@@ -27,7 +27,7 @@ export const GetSearchProduct = (search) => async(dispatch) => {
 
 export const GetMyProducts = () => async (dispatch) => {
   try {
-    const res = await axios.get('/api/profile/myproducts');
+    const res = await axios.get('https://evening-refuge-84655.herokuapp.com/api/profile/myproducts');
 
     dispatch({
       type: GET_MYPRODUCT,
@@ -44,7 +44,7 @@ export const GetMyProducts = () => async (dispatch) => {
 
 export const GetprofileById = (id) => async (dispatch) => {
   try {
-    const res = await axios.get(`/api/users/myprofile/${id}`);
+    const res = await axios.get(`https://evening-refuge-84655.herokuapp.com/api/users/myprofile/${id}`);
 
     dispatch({
       type: GET_MYPRODUCT_USER,

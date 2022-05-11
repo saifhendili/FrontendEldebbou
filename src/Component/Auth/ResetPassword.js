@@ -17,7 +17,7 @@ function ResetPassword({location}) {
           };
           try {
             const {data} = await axios.put(
-              `/api/users/resetpassword/${searchParams.get("resetToken")}`,
+              `https://evening-refuge-84655.herokuapp.com/api/users/resetpassword/${searchParams.get("resetToken")}`,
               {password},config
     
             );
